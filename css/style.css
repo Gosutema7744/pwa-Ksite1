@@ -1,4 +1,6 @@
 * {
+	font:normal normal normal medium/normal sana-serif;
+	color:white;
 	width: 100%;
 	height: 100%;
 	padding: 0;
@@ -8,7 +10,7 @@
 }
 
 #title{
-	background:black;
-	color:yellow;
+	background:white;
+	color:black;
 	
 }
