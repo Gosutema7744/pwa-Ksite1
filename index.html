@@ -90,7 +90,27 @@
 		</textarea>
 	</form>
 									  
-	<canvas id="stage"></canvas>
+	<script src="jquery.min.js"></script>
+ <script src="jquery.cookie.js"></script>
+ <script>
+ function save() {
+ $.cookie("hoge", $("#hoge").val());
+ }
+ 
+ function load() {
+ if($.cookie("hoge")) {
+ $("#fuga").html($.cookie("hoge").replace(/\n/g, "<br>"));
+ } else {
+ $("#fuga").text("null")
+ }
+ }
+ </script>
+ 
+ <textarea id="hoge" rows="5" cols="50"></textarea><br>
+ <input type="button" value="save(cookie)" onclick="save();">
+ <input type="button" value="load(cookie)" onclick="load();">
+ <p id="fuga"></p>
+
 			  
 </body>
 </html>
