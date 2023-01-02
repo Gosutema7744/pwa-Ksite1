@@ -27,3 +27,7 @@ display: inline-block;
 div.o4{
 border: double medium white;
 }
+
+p.o40{
+border: solid thin white;
+}
