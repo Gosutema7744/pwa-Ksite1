@@ -15,13 +15,14 @@
 </head>
 <body>
 	
-	
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script> 
+ <script src="jquery.cookie.js"></script>
 	
 
 
 			
 	<div class="logo">
-		<a href="/pwa-Ksite1">
+		<a href="/pwa-Ksite1/url.html">
 			<img src="./images/kapp-icon-192.png" width="40px" height="40px">
 			K-site
 		</a>
@@ -53,8 +54,7 @@
 	
 	<p>-MEMO-</p>
 
-	<script src="http://code.jquery.com/jquery-1.7.1.js"></script> 
- <script src="jquery.cookie.js"></script>
+
  <script>
  function save() {
  $.cookie("hoge", $("#hoge").val());
@@ -69,7 +69,7 @@
  }
  </script>
  
- <textarea id="hoge" rows="5" cols="50"><div id="fuga"></div></textarea><br>
+ <textarea id="hoge" rows="5" cols="50"></textarea><br>
  <input type="button" value="save(cookie)" onclick="save();">
  <input type="button" value="load(cookie)" onclick="load();">
  <p id="fuga"></p>
