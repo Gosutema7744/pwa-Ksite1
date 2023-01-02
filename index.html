@@ -110,6 +110,62 @@
  <input type="button" value="save(cookie)" onclick="save();">
  <input type="button" value="load(cookie)" onclick="load();">
  <p id="fuga"></p>
+	
+	
+	
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>  
+  <script src="jquery.cookie.js"></script>  
+  <script type="text/javascript">  
+  $(function(){  
+ //読み込んだクッキーをフォームのvalue値として代入  
+  $('#name').val($.cookie("name"));  
+ $('#age').val($.cookie("age"));  
+      
+  $('#email').val($.cookie("email"));  
+ $('#tel').val($.cookie("tel"));  
+      
+  $('#pr').val($.cookie("pr"));  
+    
+  //submitを押したら、クッキーを保存  
+  $("#submit").click(function(){  
+    
+  $.cookie("name",$('#name').attr('value'));  
+  $.cookie("age",$('#age').attr('value'));  
+  $.cookie("email",$('#email').attr('value'));  
+  $.cookie("email_re",$('#email_re').attr('value'));  
+  $.cookie("tel",$('#tel').attr('value'));  
+  $.cookie("pr",$('#pr').attr('value'));  
+    
+  location.href="index.html"  
+  })  
+  })  
+  </script>   
+  <table border="0" cellspacing="0" cellpadding="0">  
+  <tr>  
+  <th>Name</th>  
+  <td><input type="text" name="name" id="name" value=""></td>  
+  </tr>  
+  <tr>  
+  <th>Age</th>  
+  <td><input type="text" name="age" id="age" value=""></td>  
+  </tr>  
+  <tr>  
+  <th>E-mail</th>  
+  <td><input type="text" name="email" id="email" value=""></td>  
+  </tr>  
+  <tr>  
+  <th>Tel</th>  
+  <td><input type="text" name="tel" id="tel" size="38" value="" /></td>  
+  </tr>  
+  <tr>  
+  <th>Text</th>  
+  <td><textarea name="pr" rows="4" cols="30" id="pr"></textarea></td>  
+  </tr>  
+  <tr>  
+  <th></th>  
+  <td><input type="submit" value="決定" id="submit"></td>  
+  </tr>  
+</table>  
 
 			  
 </body>
