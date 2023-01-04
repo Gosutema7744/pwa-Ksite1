@@ -1,6 +1,6 @@
 // 設定開始（指定日の年月日を設定してください）
 
-var y = 2023; // 年
+var y = new Date().getFullYear(); // 年
 var m = 12; // 月
 var d = 31; // 日
 
