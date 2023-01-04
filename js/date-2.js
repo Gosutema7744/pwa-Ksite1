@@ -1,7 +1,7 @@
 
 // 設定開始（指定日の年月日を設定してください）
 
-var y = new Date().getFullYear(); // 年
+var y = new Date().getFullYear() + 1; // 年
 var m = new Date().getMonth(); // 月
 var d = 31; // 日
 
