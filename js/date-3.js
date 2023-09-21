@@ -26,14 +26,14 @@ else if(days < 0) {
 	}
 	else{
 	days = Math.abs(days);
-	document.write('定期テスト <b>' + days + '</b> 日目'); // 指定日後の表示
+	document.write('定期テスト　<b>' + days + '</b>  日目'); // 指定日後の表示
 
 	}
 
 }
 else {
 
-	document.write('定期テスト： <b>' + days + '</b> 日'); // 指定日前の表示
+	document.write(' 定期テストまで　<b>' + days + '</b>  日'); // 指定日前の表示
 
 }
 // 表示終了
