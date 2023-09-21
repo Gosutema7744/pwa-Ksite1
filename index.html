@@ -57,9 +57,28 @@ document.form1.field1.value = hoge;
  $("#fuga").text("null")
  }
  }
- 
- 
  </script>
+
+
+//これは0922に追加したものです
+<script type="text/javascript">
+$(function(){
+
+	$('#name').val($.cookie("name"));
+	$('#pr').val($.cookie("pr"));
+	
+	$("#submit").click(function(){
+		$.cookie("name",$('#name').attr('value'));
+		$.cookie("pr",$('#pr').attr('value'));
+		location.href="index.html"
+	})
+})
+</script>
+
+
+
+
+	
 	
 	<p>こんにちは</p><br>
 	<script src="js/date-2.js"></script>
@@ -88,7 +107,9 @@ document.form1.field1.value = hoge;
 	<form action=”#">
 		<textarea name="テキストエリア" rows="30" cols="50" wrap="hard">ここに入力</textarea>
 	</form>
-									  
+//ここも追加しといたでー 0922
+	<textarea name="pr" rows="4" cols="30" id="pr"></textarea>
+	<input type="submit" value="決定" id="submit">
 	<h4>--設定--</h4>
 	
 	
