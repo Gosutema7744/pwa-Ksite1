@@ -47,7 +47,7 @@
 document.form1.field1.value = hoge;
 
  function save() {
- $.cookie("hoge", $("#hoge").val());
+ $.cookie("hoge", $("#hoge").val() , { expires: 30 });
  }
  
  function load() {
