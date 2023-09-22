@@ -26,7 +26,7 @@ else if(days < 0) {
 }
 else {
 
-	document.write('⭐️駅伝まで残り　 <b>' + days + '</b>   日！！⭐️'); // 指定日前の表示
+	document.write('⭐️駅伝まで残り  <b>' + days + '</b>   日！！⭐️'); // 指定日前の表示
 
 }
 // 表示終了
