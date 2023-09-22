@@ -77,7 +77,13 @@ $(function(){
 </script>
 
 
-
+<script>
+ if($.cookie("hoge")) {
+ $("#fuga").html($.cookie("hoge").replace(/\n/g, "<br>"));
+ } else {
+ $("#fuga").text("null")
+ }
+</script>
 
 	
 	
