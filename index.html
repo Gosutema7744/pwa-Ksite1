@@ -57,6 +57,14 @@ document.form1.field1.value = hoge;
  $("#fuga").text("null")
  }
  }
+
+
+ if($.cookie("hoge")) {
+ $("#fuga").html($.cookie("hoge").replace(/\n/g, "<br>"));
+ } else {
+ $("#fuga").text("null")
+ }
+	
  </script>
 
 
@@ -77,15 +85,6 @@ $(function(){
 </script>
 
 
-<script>
-
-document.form1.field1.value = hoge;
- if($.cookie("hoge")) {
- $("#fuga").html($.cookie("hoge").replace(/\n/g, "<br>"));
- } else {
- $("#fuga").text("null")
- }
-</script>
 
 	
 	
