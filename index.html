@@ -61,6 +61,10 @@ document.form1.field1.value = hoge;
  }
  }
 
+ function save2() {
+ $.cookie("hoge2", $("#text01").val() , { expires: 30 });
+ }
+
 	
  </script>
 
@@ -108,7 +112,7 @@ $(function(){
 	</ul>
 	
 	<h3>--MEMO--</h3>
-
+<input type="button" value="save(c)" onclick="save2();">
 	<form action="foo.php">
 		<textarea id="text01" name="テキストエリア" rows="30" cols="50" wrap="hard">ここに入力</textarea>
 	</form>
@@ -147,8 +151,8 @@ var text = document.getElementById("pr").value;
 });
 */
 
-if($.cookie("hoge")) {
- $("#text01").html($.cookie("hoge").replace(/\n/g, "<br>"));
+if($.cookie("hoge2")) {
+ $("#text01").html($.cookie("hoge2").replace(/\n/g, "<br>"));
  } else {
  $("#text01").text("null")
  }
