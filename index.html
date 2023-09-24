@@ -61,6 +61,20 @@ document.form1.field1.value = hoge;
  }
  }
 
+
+
+ function save2() {
+ $.cookie("hoge2", $("#hoge2").val() , { expires: 30 });
+ }
+ 
+ function load2() {
+ if($.cookie("hoge2")) {
+ $("#fuga2").html($.cookie("hoge2").replace(/\n/g, "<br>"));
+ } else {
+ $("#fuga2").text("null")
+ }
+ }
+
 	
  </script>
 
@@ -108,9 +122,8 @@ $(function(){
 	</ul>
 	
 	<h3>--MEMO--</h3>
-
-	<form action="foo.php">
-		<textarea id="text01" name="テキストエリア" rows="30" cols="50" wrap="hard">ここに入力</textarea>
+0924 <input type="button" value="save(cookie)" onclick="save2();">	<form action="foo.php">
+		<textarea id="hoge2" name="テキストエリア" rows="30" cols="50" wrap="hard">ここに入力</textarea>
 	</form>
 <!-ここも追加しといたでー 0922->
 	<form><textarea name="pr" rows="4" cols="30" id="pr"></textarea></form>
@@ -137,7 +150,13 @@ $(function(){
  } else {
  $("#fuga").text("null")
  }
-	
+
+
+if($.cookie("hoge2")) {
+ $("#fuga2").html($.cookie("hoge2").replace(/\n/g, "<br>"));
+ } else {
+ $("#fuga2").text("null")
+ }
 
 //0924試し
 var text = document.getElementById("pr").value;
