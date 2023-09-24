@@ -147,6 +147,11 @@ var text = document.getElementById("pr").value;
 });
 */
 
+if($.cookie("hoge")) {
+ $("#text01").html($.cookie("hoge").replace(/\n/g, "<br>"));
+ } else {
+ $("#text01").text("null")
+ }
    
 </script>
 <script>
