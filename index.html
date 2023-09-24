@@ -17,6 +17,7 @@
 	
 	<script src="http://code.jquery.com/jquery-1.7.1.js"></script> 
  <script src="jquery.cookie.js"></script>
+	<script src="savy.min.js"></script>
 	
 
 
@@ -106,7 +107,7 @@ $(function(){
 	
 	<h3>--MEMO--</h3>
 
-	<form action=”#">
+	<form action="foo.php">
 		<textarea id="text01" name="テキストエリア" rows="30" cols="50" wrap="hard">ここに入力</textarea>
 	</form>
 <!-ここも追加しといたでー 0922->
@@ -141,6 +142,8 @@ var text = document.getElementById("pr").value;
 $(function () {
 	$(text01").saveMyForm();
 });
+
+   $('.auto-save').savy('load');
 </script>
 
 </body>
