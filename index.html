@@ -107,7 +107,7 @@ $(function(){
 	<h3>--MEMO--</h3>
 
 	<form action=”#">
-		<textarea name="テキストエリア" rows="30" cols="50" wrap="hard">ここに入力</textarea>
+		<textarea id="text01" name="テキストエリア" rows="30" cols="50" wrap="hard">ここに入力</textarea>
 	</form>
 <!-ここも追加しといたでー 0922->
 	<form><textarea name="pr" rows="4" cols="30" id="pr"></textarea></form>
@@ -139,7 +139,7 @@ $(function(){
 //0924試し
 var text = document.getElementById("pr").value;
 $(function () {
-	$("pr").saveMyForm();
+	$(text01").saveMyForm();
 });
 </script>
 
